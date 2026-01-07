@@ -36,7 +36,7 @@ export const translations = {
       hero: {
         title: 'White Global Services ApS',
         subtitle: 'Connecting Local Services with Global Trade',
-        description: 'White Global Services ApS is a Denmark-based company delivering transport services, import–export consultancy, cleaning services, and international trading solutions. We serve both local and global markets with a strong operational presence across Europe and Asia.',
+        description: 'White Global Services ApS is a Denmark-based company delivering transport services, import–export consultancy, cleaning services, and international trading solutions. We serve both local and global markets with a strong operational presence worldwide.',
         trustLine: 'Trusted. Professional. Globally Connected.',
         ctaPrimary: 'Contact Us',
         ctaSecondary: 'Our Services',
@@ -48,7 +48,7 @@ export const translations = {
           {
             icon: 'truck',
             title: 'Transport & Local Operations',
-            description: 'Reliable transport solutions for businesses and individuals across Denmark and Europe.',
+            description: 'Reliable transport solutions for businesses and individuals across Denmark and beyond.',
           },
           {
             icon: 'globe',
@@ -63,7 +63,7 @@ export const translations = {
           {
             icon: 'package',
             title: 'International Trading',
-            description: 'Active import and export operations between Asia and Europe.',
+            description: 'Active import and export operations worldwide.',
           },
         ],
       },
@@ -83,10 +83,9 @@ export const translations = {
         ],
       },
       regions: {
-        title: 'Service Regions',
-        subtitle: 'Denmark-based operations with Europe and Asia focus',
-        europe: 'Europe',
-        asia: 'Asia',
+        title: 'Global Reach',
+        subtitle: 'Denmark-based operations serving clients worldwide',
+        worldwide: 'Worldwide',
         denmark: 'Denmark HQ',
       },
       cta: {
@@ -106,7 +105,7 @@ export const translations = {
       },
       vision: {
         title: 'Our Vision',
-        text: 'Our vision is to become a trusted global service provider, recognized for excellence in transport, import–export consultancy, cleaning services, and international trading between Europe and Asia.',
+        text: 'Our vision is to become a trusted global service provider, recognized for excellence in transport, import–export consultancy, cleaning services, and international trading worldwide.',
       },
     },
 
@@ -145,7 +144,7 @@ export const translations = {
       },
       trading: {
         title: 'International Trading',
-        intro: 'We actively import and export a wide range of products, mainly between Asia and Europe.',
+        intro: 'We actively import and export a wide range of products globally.',
         categories: [
           'Food products',
           'Textiles and garments',
@@ -186,7 +185,7 @@ export const translations = {
       subtitle: 'Your trusted partner for local and international business solutions',
       points: [
         'Experienced and professional management',
-        'Strong Asia–Europe trade network',
+        'Strong global trade network',
         'Reliable and compliant operations',
         'Customer-focused solutions',
         'Competitive and transparent pricing',
@@ -258,7 +257,7 @@ export const translations = {
           },
           {
             question: 'Which areas do you serve?',
-            answer: 'We operate primarily in Denmark with international trade connections across Europe and Asia.',
+            answer: 'We operate primarily in Denmark with international trade connections worldwide.',
           },
           {
             question: 'Can you handle custom requirements?',
@@ -339,7 +338,7 @@ You have the right to access, correct, or delete your personal data. To exercise
       hero: {
         title: 'White Global Services ApS',
         subtitle: 'Lokale services med global rækkevidde',
-        description: 'White Global Services ApS er en dansk virksomhed, der leverer transportløsninger, import- og eksportkonsulentydelser, rengøringsservice samt international handel mellem Europa og Asien.',
+        description: 'White Global Services ApS er en dansk virksomhed, der leverer transportløsninger, import- og eksportkonsulentydelser, rengøringsservice samt international handel på verdensplan.',
         trustLine: 'Pålidelig. Professionel. Globalt forbundet.',
         ctaPrimary: 'Kontakt Os',
         ctaSecondary: 'Vores Ydelser',
@@ -351,7 +350,7 @@ You have the right to access, correct, or delete your personal data. To exercise
           {
             icon: 'truck',
             title: 'Transport & Lokale Operationer',
-            description: 'Pålidelige transportløsninger til virksomheder og privatpersoner i Danmark og Europa.',
+            description: 'Pålidelige transportløsninger til virksomheder og privatpersoner i Danmark og videre.',
           },
           {
             icon: 'globe',
@@ -366,7 +365,7 @@ You have the right to access, correct, or delete your personal data. To exercise
           {
             icon: 'package',
             title: 'International Handel',
-            description: 'Aktiv import og eksport mellem Asien og Europa.',
+            description: 'Aktiv import og eksport på verdensplan.',
           },
         ],
       },
@@ -386,10 +385,9 @@ You have the right to access, correct, or delete your personal data. To exercise
         ],
       },
       regions: {
-        title: 'Serviceregioner',
-        subtitle: 'Dansk baseret drift med fokus på Europa og Asien',
-        europe: 'Europa',
-        asia: 'Asien',
+        title: 'Global Rækkevidde',
+        subtitle: 'Dansk baseret drift med kunder verden over',
+        worldwide: 'Verden over',
         denmark: 'Danmark HQ',
       },
       cta: {
@@ -448,7 +446,7 @@ You have the right to access, correct, or delete your personal data. To exercise
       },
       trading: {
         title: 'International Handel',
-        intro: 'Vi importerer og eksporterer aktivt et bredt udvalg af produkter, hovedsageligt mellem Asien og Europa.',
+        intro: 'Vi importerer og eksporterer aktivt et bredt udvalg af produkter globalt.',
         categories: [
           'Fødevarer',
           'Tekstiler og beklædning',
@@ -489,7 +487,7 @@ You have the right to access, correct, or delete your personal data. To exercise
       subtitle: 'Din pålidelige partner til lokale og internationale forretningsløsninger',
       points: [
         'Erfaren og professionel ledelse',
-        'Stærkt Asien-Europa handelsnetværk',
+        'Stærkt globalt handelsnetværk',
         'Pålidelig og compliant drift',
         'Kundefokuserede løsninger',
         'Konkurrencedygtige og transparente priser',
@@ -561,7 +559,7 @@ You have the right to access, correct, or delete your personal data. To exercise
           },
           {
             question: 'Hvilke områder servicerer I?',
-            answer: 'Vi opererer primært i Danmark med internationale handelsforbindelser på tværs af Europa og Asien.',
+            answer: 'Vi opererer primært i Danmark med internationale handelsforbindelser verden over.',
           },
           {
             question: 'Kan I håndtere specielle krav?',

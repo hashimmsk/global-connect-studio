@@ -105,7 +105,7 @@ const Home = () => {
                       <MapPin className="w-10 h-10 text-primary" />
                     </div>
                     <p className="text-lg font-medium text-foreground">Denmark HQ</p>
-                    <p className="text-sm text-muted-foreground">Europe & Asia Operations</p>
+                    <p className="text-sm text-muted-foreground">Worldwide Operations</p>
                   </div>
                 </div>
               </div>
@@ -166,11 +166,7 @@ const Home = () => {
             </div>
             <div className="flex items-center gap-3 px-6 py-4 bg-secondary rounded-xl">
               <div className="w-3 h-3 rounded-full bg-accent" />
-              <span className="font-medium text-foreground">{t.home.regions.europe}</span>
-            </div>
-            <div className="flex items-center gap-3 px-6 py-4 bg-secondary rounded-xl">
-              <div className="w-3 h-3 rounded-full bg-teal-500" />
-              <span className="font-medium text-foreground">{t.home.regions.asia}</span>
+              <span className="font-medium text-foreground">{t.home.regions.worldwide}</span>
             </div>
           </div>
         </div>

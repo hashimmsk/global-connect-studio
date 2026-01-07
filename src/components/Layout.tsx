@@ -12,7 +12,7 @@ interface LayoutProps {
 const Layout = ({ children, title, description }: LayoutProps) => {
   const siteTitle = 'White Global Services ApS';
   const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle;
-  const metaDescription = description || 'Denmark-based company delivering transport services, import-export consultancy, cleaning services, and international trading solutions. Serving Europe and Asia.';
+  const metaDescription = description || 'Denmark-based company delivering transport services, import-export consultancy, cleaning services, and international trading solutions. Serving clients worldwide.';
 
   return (
     <>

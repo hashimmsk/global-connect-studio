@@ -57,7 +57,7 @@ const Services = () => {
   return (
     <Layout
       title={t.nav.services}
-      description="Explore our comprehensive services: Transport, Import/Export Consultancy, Cleaning Services, and International Trading between Europe and Asia."
+      description="Explore our comprehensive services: Transport, Import/Export Consultancy, Cleaning Services, and International Trading worldwide."
     >
       {/* Hero Section */}
       <section className="section-padding bg-gradient-to-br from-secondary to-muted/50">
