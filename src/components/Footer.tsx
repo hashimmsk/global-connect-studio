@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Logo from './Logo';
 
@@ -45,7 +45,9 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <span>+45 XXXXXXXX</span>
+                <a href="tel:+4571497700" className="hover:text-primary-foreground transition-colors">
+                  +45 71 49 77 00
+                </a>
               </div>
             </div>
           </div>
@@ -84,26 +86,23 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact & Social */}
+          {/* Contact */}
           <div>
             <h3 className="font-semibold mb-4">{t.footer.contact}</h3>
-            <div className="space-y-4">
-              <p className="text-sm text-primary-foreground/80">
-                {t.footer.cvr}
-              </p>
-              <div>
-                <h4 className="text-sm font-medium mb-2">{t.footer.followUs}</h4>
-                <div className="flex items-center gap-3">
-                  <a
-                    href="https://linkedin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-lg bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
-                  >
-                    <Linkedin className="w-4 h-4" />
-                  </a>
-                </div>
+            <div className="space-y-3 text-sm text-primary-foreground/80">
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4 flex-shrink-0" />
+                <a href="tel:+4571497700" className="hover:text-primary-foreground transition-colors">
+                  +45 71 49 77 00
+                </a>
               </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4 flex-shrink-0" />
+                <a href="mailto:info@whiteglobalservices.dk" className="hover:text-primary-foreground transition-colors">
+                  info@whiteglobalservices.dk
+                </a>
+              </div>
+              <p className="pt-2">{t.footer.cvr}</p>
             </div>
           </div>
         </div>

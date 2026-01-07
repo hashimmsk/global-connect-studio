@@ -26,8 +26,8 @@ const Contact = () => {
     {
       icon: Phone,
       label: t.contact.info.phone,
-      value: '+45 XXXXXXXX',
-      href: 'tel:+45XXXXXXXX',
+      value: '+45 71 49 77 00',
+      href: 'tel:+4571497700',
     },
     {
       icon: Clock,

@@ -43,8 +43,7 @@ const Layout = ({ children, title, description }: LayoutProps) => {
               "addressCountry": "DK"
             },
             "email": "info@whiteglobalservices.dk",
-            "telephone": "+45XXXXXXXX",
-            "taxID": "46051165"
+            "telephone": "+4571497700"
           })}
         </script>
       </Helmet>
