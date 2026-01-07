@@ -140,17 +140,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-padding bg-primary">
-        <div className="container-custom text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
-            {t.home.cta.title}
-          </h2>
-          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-            <Link to="/contact">{t.home.cta.button}</Link>
-          </Button>
-        </div>
-      </section>
     </Layout>
   );
 };

@@ -32,23 +32,9 @@ const Footer = () => {
             <p className="text-sm text-primary-foreground/80 leading-relaxed">
               {t.home.hero.subtitle}
             </p>
-            <div className="space-y-2 text-sm text-primary-foreground/80">
-              <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span>{t.footer.address}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 flex-shrink-0" />
-                <a href="mailto:info@whiteglobalservices.dk" className="hover:text-primary-foreground transition-colors">
-                  info@whiteglobalservices.dk
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 flex-shrink-0" />
-                <a href="tel:+4571497700" className="hover:text-primary-foreground transition-colors">
-                  +45 71 49 77 00
-                </a>
-              </div>
+            <div className="flex items-start gap-2 text-sm text-primary-foreground/80">
+              <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+              <span>{t.footer.address}</span>
             </div>
           </div>
 
@@ -102,7 +88,6 @@ const Footer = () => {
                   info@whiteglobalservices.dk
                 </a>
               </div>
-              <p className="pt-2">{t.footer.cvr}</p>
             </div>
           </div>
         </div>
