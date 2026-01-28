@@ -39,6 +39,7 @@ const Team = () => {
                   name={member.name}
                   role={member.role}
                   description={member.description}
+                  phone={(member as { phone?: string }).phone}
                 />
               </div>
             ))}
