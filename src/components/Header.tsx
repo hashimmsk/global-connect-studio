@@ -35,6 +35,10 @@ const Header = () => {
     return location.pathname.startsWith(href);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -56,6 +60,7 @@ const Header = () => {
               <Link
                 key={link.href}
                 to={link.href}
+                onClick={scrollToTop}
                 className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
                   isActive(link.href)
                     ? 'text-primary bg-secondary'
@@ -71,7 +76,7 @@ const Header = () => {
           <div className="hidden lg:flex items-center gap-4">
             <LanguageSwitch />
             <Button asChild>
-              <Link to="/contact">{t.header.cta}</Link>
+              <Link to="/contact" onClick={scrollToTop}>{t.header.cta}</Link>
             </Button>
           </div>
 
@@ -91,7 +96,7 @@ const Header = () => {
                     <Link
                       key={link.href}
                       to={link.href}
-                      onClick={() => setIsOpen(false)}
+                      onClick={() => { setIsOpen(false); scrollToTop(); }}
                       className={`text-lg font-medium transition-colors ${
                         isActive(link.href)
                           ? 'text-primary'
@@ -102,7 +107,7 @@ const Header = () => {
                     </Link>
                   ))}
                   <Button asChild className="mt-4">
-                    <Link to="/contact" onClick={() => setIsOpen(false)}>
+                    <Link to="/contact" onClick={() => { setIsOpen(false); scrollToTop(); }}>
                       {t.header.cta}
                     </Link>
                   </Button>

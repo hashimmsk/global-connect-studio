@@ -18,8 +18,8 @@ const Contact = () => {
     {
       icon: Mail,
       label: t.contact.info.email,
-      value: 'info@whiteglobalservices.dk',
-      href: 'mailto:info@whiteglobalservices.dk',
+      value: 'info@whiteglobalservices.com',
+      href: 'mailto:info@whiteglobalservices.com',
       description: 'Email us anytime',
     },
     {

@@ -7,6 +7,10 @@ const Footer = () => {
   const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  };
+
   const quickLinks = [
     { href: '/', label: t.nav.home },
     { href: '/about', label: t.nav.about },
@@ -46,6 +50,7 @@ const Footer = () => {
                 <li key={link.href}>
                   <Link
                     to={link.href}
+                    onClick={scrollToTop}
                     className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                   >
                     {link.label}
@@ -63,6 +68,7 @@ const Footer = () => {
                 <li key={link.href}>
                   <Link
                     to={link.href}
+                    onClick={scrollToTop}
                     className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                   >
                     {link.label}
@@ -84,8 +90,8 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <a href="mailto:info@whiteglobalservices.dk" className="hover:text-primary-foreground transition-colors">
-                  info@whiteglobalservices.dk
+                <a href="mailto:info@whiteglobalservices.com" className="hover:text-primary-foreground transition-colors">
+                  info@whiteglobalservices.com
                 </a>
               </div>
             </div>
@@ -101,6 +107,7 @@ const Footer = () => {
             <div className="flex items-center gap-6">
               <Link
                 to="/legal"
+                onClick={scrollToTop}
                 className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors"
               >
                 {t.nav.legal}

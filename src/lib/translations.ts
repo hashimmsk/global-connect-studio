@@ -285,7 +285,7 @@ We collect information you provide directly to us, such as when you fill out a c
 
 We use this information to respond to your inquiries, provide our services, and improve our offerings. We do not sell or share your personal information with third parties except as necessary to provide our services or as required by law.
 
-You have the right to access, correct, or delete your personal data. To exercise these rights, please contact us at info@whiteglobalservices.dk.`,
+You have the right to access, correct, or delete your personal data. To exercise these rights, please contact us at info@whiteglobalservices.com.`,
       },
       cookies: {
         title: 'Cookie Notice',
@@ -296,7 +296,7 @@ You have the right to access, correct, or delete your personal data. To exercise
         name: 'White Global Services ApS',
         cvr: 'CVR: 46051165',
         address: 'Jernholmen 38, st. tv, 2650 Hvidovre, Denmark',
-        email: 'info@whiteglobalservices.dk',
+        email: 'info@whiteglobalservices.com',
         type: 'Company Type: ApS (Private Limited Company)',
       },
       disclaimer: {
@@ -590,7 +590,7 @@ Vi indsamler oplysninger, du giver os direkte, såsom når du udfylder en kontak
 
 Vi bruger disse oplysninger til at besvare dine henvendelser, levere vores tjenester og forbedre vores tilbud. Vi sælger eller deler ikke dine personlige oplysninger med tredjeparter undtagen som nødvendigt for at levere vores tjenester eller som krævet ved lov.
 
-Du har ret til at få adgang til, rette eller slette dine personlige data. For at udøve disse rettigheder, kontakt os venligst på info@whiteglobalservices.dk.`,
+Du har ret til at få adgang til, rette eller slette dine personlige data. For at udøve disse rettigheder, kontakt os venligst på info@whiteglobalservices.com.`,
       },
       cookies: {
         title: 'Cookie-meddelelse',
@@ -601,7 +601,7 @@ Du har ret til at få adgang til, rette eller slette dine personlige data. For a
         name: 'White Global Services ApS',
         cvr: 'CVR: 46051165',
         address: 'Jernholmen 38, st. tv, 2650 Hvidovre, Danmark',
-        email: 'info@whiteglobalservices.dk',
+        email: 'info@whiteglobalservices.com',
         type: 'Virksomhedstype: ApS (Anpartsselskab)',
       },
       disclaimer: {
