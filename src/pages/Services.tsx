@@ -183,14 +183,14 @@ const Services = () => {
                           </Link>
                         </Button>
                       </div>
-                      {/* Visual - always on right, 3:2 aspect ratio matching images */}
-                      <div className="hidden lg:block overflow-hidden">
+                      {/* Visual - on right for desktop, below content on mobile */}
+                      <div className="overflow-hidden">
                         {service.images && service.images.length > 0 ? (
                           <div className="w-full aspect-[3/2]">
                             <ImageCarousel images={service.images} alt={service.title} />
                           </div>
                         ) : (
-                          <div className="w-full aspect-[3/2] flex items-center justify-center bg-gradient-to-br from-secondary to-muted">
+                          <div className="hidden lg:flex w-full aspect-[3/2] items-center justify-center bg-gradient-to-br from-secondary to-muted">
                             <div className="w-32 h-32 rounded-3xl bg-background shadow-lg flex items-center justify-center">
                               <service.icon className="w-16 h-16 text-primary" />
                             </div>
