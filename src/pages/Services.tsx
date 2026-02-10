@@ -1,11 +1,77 @@
 import { Link, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Layout from '@/components/Layout';
-import SectionHeader from '@/components/SectionHeader';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Truck, Globe, Sparkles, Package, Check, ArrowRight, AlertCircle } from 'lucide-react';
+import { Truck, Globe, Sparkles, Package, Check, ArrowRight, AlertCircle, ChevronLeft, ChevronRight } from 'lucide-react';
+
+interface ImageCarouselProps {
+  images: string[];
+  alt: string;
+}
+
+const ImageCarousel = ({ images, alt }: ImageCarouselProps) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goToPrevious = () => {
+    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
+  if (images.length === 0) return null;
+
+  return (
+    <div className="relative w-full h-full group">
+      <img
+        src={images[currentIndex]}
+        alt={`${alt} ${currentIndex + 1}`}
+        className="w-full h-full object-cover transition-opacity duration-300"
+      />
+
+      {images.length > 1 && (
+        <>
+          {/* Left Arrow */}
+          <button
+            onClick={goToPrevious}
+            className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+            aria-label="Previous image"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+
+          {/* Right Arrow */}
+          <button
+            onClick={goToNext}
+            className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+            aria-label="Next image"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+
+          {/* Dots Indicator */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+            {images.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentIndex(idx)}
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-200 ${
+                  idx === currentIndex
+                    ? 'bg-white w-6'
+                    : 'bg-white/50 hover:bg-white/75'
+                }`}
+                aria-label={`Go to image ${idx + 1}`}
+              />
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+};
 
 const Services = () => {
   const { t } = useLanguage();
@@ -29,6 +95,7 @@ const Services = () => {
       title: t.services.transport.title,
       intro: t.services.transport.intro,
       features: t.services.transport.features,
+      images: [] as string[],
     },
     {
       id: 'import-export',
@@ -36,6 +103,7 @@ const Services = () => {
       title: t.services.importExport.title,
       intro: t.services.importExport.intro,
       features: t.services.importExport.features,
+      images: [] as string[],
     },
     {
       id: 'cleaning',
@@ -43,6 +111,7 @@ const Services = () => {
       title: t.services.cleaning.title,
       intro: t.services.cleaning.intro,
       features: t.services.cleaning.features,
+      images: ['/cleaning-1.jpeg'],
     },
     {
       id: 'trading',
@@ -51,6 +120,7 @@ const Services = () => {
       intro: t.services.trading.intro,
       features: t.services.trading.categories,
       disclaimer: t.services.trading.disclaimer,
+      images: ['/trade-1.jpeg', '/trade-2.jpeg', '/trade-3.jpeg'],
     },
   ];
 
@@ -81,16 +151,14 @@ const Services = () => {
               <div
                 key={service.id}
                 id={service.id}
-                className={`scroll-mt-24 animate-fade-in ${
-                  index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-                }`}
+                className="scroll-mt-24 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <Card className="border-border/50 bg-card overflow-hidden">
                   <CardContent className="p-0">
-                    <div className="grid lg:grid-cols-2 gap-0">
+                    <div className={`grid lg:grid-cols-2 gap-0 ${index % 2 === 1 ? 'lg:[direction:rtl]' : ''}`}>
                       {/* Content */}
-                      <div className="p-8 lg:p-12">
+                      <div className={`p-8 lg:p-12 ${index % 2 === 1 ? 'lg:[direction:ltr]' : ''}`}>
                         <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-6">
                           <service.icon className="w-7 h-7 text-accent" />
                         </div>
@@ -126,10 +194,16 @@ const Services = () => {
                         </Button>
                       </div>
                       {/* Visual */}
-                      <div className="hidden lg:flex items-center justify-center bg-gradient-to-br from-secondary to-muted p-12">
-                        <div className="w-32 h-32 rounded-3xl bg-background shadow-large flex items-center justify-center">
-                          <service.icon className="w-16 h-16 text-primary" />
-                        </div>
+                      <div className={`hidden lg:block aspect-auto min-h-[400px] overflow-hidden ${index % 2 === 1 ? 'lg:[direction:ltr]' : ''}`}>
+                        {service.images && service.images.length > 0 ? (
+                          <ImageCarousel images={service.images} alt={service.title} />
+                        ) : (
+                          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-secondary to-muted p-12">
+                            <div className="w-32 h-32 rounded-3xl bg-background shadow-lg flex items-center justify-center">
+                              <service.icon className="w-16 h-16 text-primary" />
+                            </div>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </CardContent>

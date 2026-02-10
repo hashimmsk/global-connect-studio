@@ -35,7 +35,7 @@ export const translations = {
     home: {
       hero: {
         title: 'White Global Services ApS',
-        subtitle: 'Connecting Local Services with Global Trade',
+        subtitle: 'Your Partner for Global Trade and Services',
         description: 'White Global Services ApS is a Denmark-based company delivering transport services, import–export consultancy, cleaning services, and international trading solutions. We serve both local and global markets with a strong operational presence worldwide.',
         trustLine: 'Trusted. Professional. Globally Connected.',
         ctaPrimary: 'Contact Us',
@@ -340,7 +340,7 @@ You have the right to access, correct, or delete your personal data. To exercise
     home: {
       hero: {
         title: 'White Global Services ApS',
-        subtitle: 'Lokale services med global rækkevidde',
+        subtitle: 'Din Partner for Global Handel og Service',
         description: 'White Global Services ApS er en dansk virksomhed, der leverer transportløsninger, import- og eksportkonsulentydelser, rengøringsservice samt international handel på verdensplan.',
         trustLine: 'Pålidelig. Professionel. Globalt forbundet.',
         ctaPrimary: 'Kontakt Os',
