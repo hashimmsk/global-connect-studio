@@ -58,11 +58,10 @@ const ImageCarousel = ({ images, alt }: ImageCarouselProps) => {
               <button
                 key={idx}
                 onClick={() => setCurrentIndex(idx)}
-                className={`w-2.5 h-2.5 rounded-full transition-all duration-200 ${
-                  idx === currentIndex
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-200 ${idx === currentIndex
                     ? 'bg-white w-6'
                     : 'bg-white/50 hover:bg-white/75'
-                }`}
+                  }`}
                 aria-label={`Go to image ${idx + 1}`}
               />
             ))}
@@ -156,9 +155,9 @@ const Services = () => {
               >
                 <Card className="border-border/50 bg-card overflow-hidden">
                   <CardContent className="p-0">
-                    <div className={`grid lg:grid-cols-2 gap-0 ${index % 2 === 1 ? 'lg:[direction:rtl]' : ''}`}>
-                      {/* Content */}
-                      <div className={`p-8 lg:p-12 ${index % 2 === 1 ? 'lg:[direction:ltr]' : ''}`}>
+                    <div className="grid lg:grid-cols-2 gap-0">
+                      {/* Content - always on left */}
+                      <div className="p-8 lg:p-10 flex flex-col justify-center">
                         <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-6">
                           <service.icon className="w-7 h-7 text-accent" />
                         </div>
@@ -193,12 +192,14 @@ const Services = () => {
                           </Link>
                         </Button>
                       </div>
-                      {/* Visual */}
-                      <div className={`hidden lg:block aspect-auto min-h-[400px] overflow-hidden ${index % 2 === 1 ? 'lg:[direction:ltr]' : ''}`}>
+                      {/* Visual - always on right, 3:2 aspect ratio matching images */}
+                      <div className="hidden lg:block overflow-hidden">
                         {service.images && service.images.length > 0 ? (
-                          <ImageCarousel images={service.images} alt={service.title} />
+                          <div className="w-full aspect-[3/2]">
+                            <ImageCarousel images={service.images} alt={service.title} />
+                          </div>
                         ) : (
-                          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-secondary to-muted p-12">
+                          <div className="w-full aspect-[3/2] flex items-center justify-center bg-gradient-to-br from-secondary to-muted">
                             <div className="w-32 h-32 rounded-3xl bg-background shadow-lg flex items-center justify-center">
                               <service.icon className="w-16 h-16 text-primary" />
                             </div>

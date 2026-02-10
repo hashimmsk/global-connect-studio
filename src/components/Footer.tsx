@@ -32,7 +32,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <Logo className="[&_span]:text-primary-foreground [&_.text-muted-foreground]:text-primary-foreground/70" />
+            <Logo variant="light" />
             <p className="text-sm text-primary-foreground/80 leading-relaxed">
               {t.home.hero.subtitle}
             </p>

@@ -1,13 +1,16 @@
 interface LogoProps {
   className?: string;
-  showText?: boolean;
+  variant?: 'default' | 'light';
 }
 
-const Logo = ({ className = '' }: LogoProps) => {
+const Logo = ({ className = '', variant = 'default' }: LogoProps) => {
+  // Use transparent PNG for dark backgrounds (footer), JPEG for light backgrounds (header)
+  const logoSrc = variant === 'light' ? '/logo-transparent.png' : '/logo.jpeg';
+
   return (
     <div className={`flex items-center ${className}`}>
       <img 
-        src="/logo.jpeg" 
+        src={logoSrc} 
         alt="White Global Services" 
         className="h-10 md:h-12 w-auto object-contain"
       />
