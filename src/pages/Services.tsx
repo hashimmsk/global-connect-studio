@@ -154,9 +154,9 @@ const Services = () => {
               >
                 <Card className="border-border/50 bg-card overflow-hidden">
                   <CardContent className="p-0">
-                    <div className="grid lg:grid-cols-2 gap-0 items-stretch">
+                    <div className="grid lg:grid-cols-2 gap-0 items-center">
                       {/* Content - always on left, vertically centered */}
-                      <div className="p-8 lg:p-10 flex flex-col justify-center">
+                      <div className="p-8 lg:p-10">
                         <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-6">
                           <service.icon className="w-7 h-7 text-accent" />
                         </div>
@@ -183,14 +183,14 @@ const Services = () => {
                           </Link>
                         </Button>
                       </div>
-                      {/* Visual - always on right, stretches to match content height */}
-                      <div className="hidden lg:flex items-stretch overflow-hidden">
+                      {/* Visual - always on right, 3:2 aspect ratio matching images */}
+                      <div className="hidden lg:block overflow-hidden">
                         {service.images && service.images.length > 0 ? (
-                          <div className="w-full">
+                          <div className="w-full aspect-[3/2]">
                             <ImageCarousel images={service.images} alt={service.title} />
                           </div>
                         ) : (
-                          <div className="w-full flex items-center justify-center bg-gradient-to-br from-secondary to-muted">
+                          <div className="w-full aspect-[3/2] flex items-center justify-center bg-gradient-to-br from-secondary to-muted">
                             <div className="w-32 h-32 rounded-3xl bg-background shadow-lg flex items-center justify-center">
                               <service.icon className="w-16 h-16 text-primary" />
                             </div>
