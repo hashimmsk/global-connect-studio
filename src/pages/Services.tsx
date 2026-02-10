@@ -4,7 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import Layout from '@/components/Layout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Truck, Globe, Sparkles, Package, Check, ArrowRight, AlertCircle, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Truck, Globe, Sparkles, Package, Check, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface ImageCarouselProps {
   images: string[];
@@ -118,7 +118,6 @@ const Services = () => {
       title: t.services.trading.title,
       intro: t.services.trading.intro,
       features: t.services.trading.categories,
-      disclaimer: t.services.trading.disclaimer,
       images: ['/trade-1.jpeg', '/trade-2.jpeg', '/trade-3.jpeg'],
     },
   ];
@@ -155,8 +154,8 @@ const Services = () => {
               >
                 <Card className="border-border/50 bg-card overflow-hidden">
                   <CardContent className="p-0">
-                    <div className="grid lg:grid-cols-2 gap-0">
-                      {/* Content - always on left */}
+                    <div className="grid lg:grid-cols-2 gap-0 items-stretch">
+                      {/* Content - always on left, vertically centered */}
                       <div className="p-8 lg:p-10 flex flex-col justify-center">
                         <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-6">
                           <service.icon className="w-7 h-7 text-accent" />
@@ -177,14 +176,6 @@ const Services = () => {
                             </li>
                           ))}
                         </ul>
-                        {service.disclaimer && (
-                          <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg mb-6">
-                            <AlertCircle className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                            <p className="text-sm text-muted-foreground">
-                              {service.disclaimer}
-                            </p>
-                          </div>
-                        )}
                         <Button asChild>
                           <Link to={`/contact?service=${service.id}`}>
                             {t.services.cta}
@@ -192,14 +183,14 @@ const Services = () => {
                           </Link>
                         </Button>
                       </div>
-                      {/* Visual - always on right, 3:2 aspect ratio matching images */}
-                      <div className="hidden lg:block overflow-hidden">
+                      {/* Visual - always on right, stretches to match content height */}
+                      <div className="hidden lg:flex items-stretch overflow-hidden">
                         {service.images && service.images.length > 0 ? (
-                          <div className="w-full aspect-[3/2]">
+                          <div className="w-full">
                             <ImageCarousel images={service.images} alt={service.title} />
                           </div>
                         ) : (
-                          <div className="w-full aspect-[3/2] flex items-center justify-center bg-gradient-to-br from-secondary to-muted">
+                          <div className="w-full flex items-center justify-center bg-gradient-to-br from-secondary to-muted">
                             <div className="w-32 h-32 rounded-3xl bg-background shadow-lg flex items-center justify-center">
                               <service.icon className="w-16 h-16 text-primary" />
                             </div>
